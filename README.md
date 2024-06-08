@@ -7,7 +7,7 @@ A simple project to setup reagent, wagmi and shadow-cljs.
 # Install dependencies
 npm install
 
-# Start application and tests
+# Start application
 npm start
 ```
 
@@ -16,9 +16,9 @@ App available at http://localhost:5000
 
 ## Used software
 - [shadow-cljs](https://github.com/thheller/shadow-cljs)
-- [helix](https://github.com/lilactown/helix)
-- [jsdom](https://github.com/jsdom/jsdom)
+- [reagent](https://github.com/reagent-project/reagent)
 - [mantine](https://github.com/mantinedev/mantine)
+- [wagmi](https://github.com/wevm/wagmi)
 
 ## TODO
 - [x] Fix: Test [Issue](https://github.com/liszper/teamplate/issues/1)
