@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "watch:typescript": "babel src/react --out-dir src/ecmascript --watch --extensions .ts,.tsx",
     "watch:css": "postcss src/css/app.css -w --dir public/app --verbose",
-    "watch:clj": "shadow-cljs watch app",
+    "watch:clojure": "shadow-cljs watch app",
     "release:css": "postcss src/css/app.css --dir public/app",
-    "release:clj": "shadow-cljs release app",
+    "release:clojure": "shadow-cljs release app",
     "start": "conc -c auto npm:watch:*",
     "release": "conc -c auto npm:release:* && npm run bundle:optimize",
     "bundle": "esbuild --bundle public/app/lib.js --outfile=public/app/lib.bundle.js",
@@ -25,7 +26,10 @@
     "wagmi": "^2.9.10"
   },
   "devDependencies": {
+    "@babel/cli": "^7.24.7",
+    "@babel/core": "^7.24.7",
     "@testing-library/react": "^14.1.2",
+    "babel": "^6.23.0",
     "concurrently": "^8.2.2",
     "cssnano": "^6.0.3",
     "global-jsdom": "9.0.1",
