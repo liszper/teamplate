@@ -7,7 +7,7 @@ A simple project to setup reagent, wagmi and shadow-cljs.
 # Install dependencies
 npm install
 
-# Start application and tests
+# Start application
 npm start
 ```
 
