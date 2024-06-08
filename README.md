@@ -9,6 +9,7 @@ npm i && npm ci
 
 # Start application and tests
 npm start
+```
 
 ### After running `npm start`
 App available at http://localhost:5000  
