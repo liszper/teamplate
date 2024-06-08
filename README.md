@@ -1,6 +1,6 @@
-# helix-jsdom-portfolio-mantine
+# teamplate
 
-A simple project to setup and evaluate mantine, jsdom, portfolio, helix and shadow-cljs.
+A simple project to setup reagent, wagmi and shadow-cljs.
 
 ## How to use
 ```bash
@@ -39,5 +39,4 @@ npx shadow-cljs watch app tests portfolio
 - [mantine](https://github.com/mantinedev/mantine)
 
 ## TODO
-- [x] Fix: Weird bug on portfolio + mantine css [Issue](https://github.com/cjohansen/portfolio/issues/21)
-- [x] Fix: Mantine not working on JSDOM [tests](https://github.com/rafaeldelboni/helix-jsdom-portfolio-mantine/blob/main/tests/main/mantine_test.cljs) probably related to use non mocked browser functions [Mock Web Apis](https://mantine.dev/guides/jest/#mock-web-apis)
+- [x] Fix: Test [Issue](https://github.com/liszper/teamplate/issues/1)

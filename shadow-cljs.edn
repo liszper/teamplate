@@ -1,8 +1,6 @@
 {:deps   {:aliases [:dev]}
 
- :dev-http {5000 ["public" "public/app"]
-            5001 ["public" "public/portfolio" "classpath:public"]
-            5002 ["out/tests"]}
+ :dev-http {5000 ["public" "public/app"]}
 
  :builds {:app {:target           :browser
                 :devtools         {:preloads [dev.refresh]
@@ -14,17 +12,4 @@
                 :js-options 
                 {:js-provider :external
                     :external-index "public/app/lib.js"
-                    :external-index-format :esm}}
-
-          :portfolio {:target :browser
-                      :output-dir "public/portfolio"
-                      :asset-path "/portfolio"
-                      :modules {:main {:init-fn portfolio.core/init}}}
-
-          :tests {:target    :browser-test
-                  :test-dir  "out/tests"
-                  :ns-regexp "-test$"}
-
-          :node-tests {:target    :node-test
-                       :main      node/main
-                       :output-to "out/node-tests.js"}}}
+                    :external-index-format :esm}}}}

@@ -18,4 +18,4 @@ pages
 mongodb-data
 .vscode
 linux-install.sh
-
+package-lock.json

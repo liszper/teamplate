@@ -1,14 +1,12 @@
 {
-  "name": "helix-jsdom-portfolio-mantine",
-  "version": "0.0.1",
+  "name": "teamplate",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "watch:css": "postcss src/css/app.css -w --dir public/app --verbose",
-    "watch:clj": "shadow-cljs watch app portfolio tests",
+    "watch:clj": "shadow-cljs watch app",
     "release:css": "postcss src/css/app.css --dir public/app",
     "release:clj": "shadow-cljs release app",
-    "test:watch": "shadow-cljs watch node-tests --config-merge \"{:autorun true}\"",
-    "test": "shadow-cljs compile node-tests && node out/node-tests.js",
     "start": "conc -c auto npm:watch:*",
     "release": "conc -c auto npm:release:* && npm run bundle:optimize",
     "bundle": "esbuild --bundle public/app/lib.js --outfile=public/app/lib.bundle.js",
