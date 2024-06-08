@@ -2,6 +2,7 @@
   (:require ["@mantine/core" :refer [AppShell Burger Button createTheme Group
                                      Skeleton]]
             ["@mantine/hooks" :refer [useDisclosure]]
+            ["react" :as react]
             ["wagmi" :as wagmi]))
 
 (def theme
@@ -15,6 +16,10 @@
                 :sizes {:h1 {:fontSize "rem(36)"}}}})))
 
 (defn main []
+  (react/useEffect
+    (fn [] 
+      (js/console.log "Main component rendered..")
+      )) 
   (let [address (.-address (wagmi/useAccount))
         connect (.-connect (wagmi/useConnect))
         connectors (.-connectors (wagmi/useConnect))]
