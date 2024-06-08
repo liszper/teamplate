@@ -1,0 +1,44 @@
+{
+  "name": "helix-jsdom-portfolio-mantine",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "watch:css": "postcss src/css/app.css -w --dir public/app --verbose",
+    "watch:clj": "shadow-cljs watch app portfolio tests",
+    "release:css": "postcss src/css/app.css --dir public/app",
+    "release:clj": "shadow-cljs release app",
+    "test:watch": "shadow-cljs watch node-tests --config-merge \"{:autorun true}\"",
+    "test": "shadow-cljs compile node-tests && node out/node-tests.js",
+    "start": "conc -c auto npm:watch:*",
+    "release": "conc -c auto npm:release:* && npm run bundle:optimize",
+    "bundle": "esbuild --bundle public/app/lib.js --outfile=public/app/lib.bundle.js",
+    "watch:bundle": "npm run bundle -- --watch",
+    "bundle:optimize": "npm run bundle --  --analyze --metafile=.bundle.meta.json --define:NODE_ENV=production --minify"
+  },
+  "dependencies": {
+    "@mantine/core": "^7.4.2",
+    "@mantine/hooks": "^7.4.2",
+    "@tanstack/react-query": "^5.40.1",
+    "esbuild": "^0.20.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-refresh": "^0.13.0",
+    "viem": "^2.13.7",
+    "wagmi": "^2.9.10"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^14.1.2",
+    "concurrently": "^8.2.2",
+    "cssnano": "^6.0.3",
+    "global-jsdom": "9.0.1",
+    "jsdom": "22.0.0",
+    "jsdom-global": "3.0.2",
+    "node-polyfill-webpack-plugin": "^4.0.0",
+    "postcss": "^8.4.33",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.0.0",
+    "postcss-preset-mantine": "^1.12.3",
+    "postcss-simple-vars": "^7.0.1",
+    "shadow-cljs": "^2.27.1"
+  }
+}
