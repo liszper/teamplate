@@ -1,8 +1,5 @@
 {:paths ["src"]
- :deps {lilactown/helix {:mvn/version "0.2.0"}
-        reagent/reagent {:mvn/version "1.2.0"}
+ :deps {reagent/reagent {:mvn/version "1.2.0"}
         funcool/promesa {:mvn/version "11.0.678"}}
- :aliases {:dev {:extra-paths ["tests"]
-                 :extra-deps  {no.cjohansen/portfolio {:mvn/version "2023.12.07"}
-                               thheller/shadow-cljs   {:mvn/version "2.27.1"}
+ :aliases {:dev {:extra-deps  {thheller/shadow-cljs   {:mvn/version "2.27.1"}
                                cider/cider-nrepl      {:mvn/version "0.45.0"}}}}}
